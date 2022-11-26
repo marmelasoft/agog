@@ -25,7 +25,8 @@ config :agog, AgogWeb.Endpoint,
   secret_key_base: "RR8EVOu6xjAK5RWq/OjfXZWIYfwAK70ttN1BIhtEmSki3jIHz59l95LiylVOmkYc",
   watchers: [
     # Start the esbuild watcher by calling Esbuild.install_and_run(:default, args)
-    esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]}
+    esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]},
+    tailwind: {Tailwind, :install_and_run, [:default, ~w(--watch)]}
   ]
 
 # ## SSL Support
